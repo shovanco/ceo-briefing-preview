@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'preview/**'
+      - 'index.html'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 permissions:
@@ -23,6 +23,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: preview
+          path: .
       - id: deployment
         uses: actions/deploy-pages@v4
